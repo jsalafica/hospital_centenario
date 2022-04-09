@@ -21,7 +21,13 @@ h3{
     padding: 5px;
     font-size: 16px;
 }
-h1,h2,h3{
+h4{
+    background-color: rgb(94, 65, 30);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    font-size: 18px;
+}
+h1,h2,h3,h4{
     text-align: center;
 }
 header{
@@ -41,10 +47,11 @@ body{
 .grid{
     display: grid;
     grid-template-areas: "header header header"
-                "h1 h2 h3"
-                "h1 h2 h3"
+                "h1 h1 h4"
+                "h2 h2 h4"
+                "h3 h3 h4"
                 "footer footer footer";
-    grid-template-rows: 100px 1fr 1fr 75px;
+    grid-template-rows: 100px 1 fr 1fr 75px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 15px;
@@ -61,6 +68,9 @@ header{
 }
 #h3{
     grid-area: h3;
+}
+#h4{
+    grid-area: h4;
 }
 footer{
     grid-area: footer;
