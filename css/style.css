@@ -37,8 +37,35 @@ footer{
 }
 section{
     /* height: 50%; */
-    border: 1px solid brown;
+    /* border: 1px solid brown; */
 }
 body{
     font-size: 62.5%;
+}
+.grid{
+    display: grid;
+    grid-template-areas: "header header header"
+                "h1 h2 h3"
+                "h1 h2 h3"
+                "footer footer footer";
+    grid-template-rows: 200px 1fr 1fr 75px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    height: 100vh;
+}
+header{
+    grid-area: header;
+}
+#h1 {
+    grid-area: h1;
+}
+#h2{
+    grid-area: h2;
+}
+#h3{
+    grid-area: h3;
+}
+footer{
+    grid-area: footer;
 }
